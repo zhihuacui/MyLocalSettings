@@ -127,10 +127,12 @@
 		<key>TB Is Shown</key>
 		<integer>1</integer>
 	</dict>
+	<key>NSWindow Frame NSFontPanel</key>
+	<string>0 87 1280 556 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>269 141 606 456 0 0 1280 777 </string>
+	<string>269 170 606 456 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 54 1277 723 0 0 1280 777 </string>
+	<string>0 66 1277 711 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 309 570 452 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -863,6 +865,10 @@
 	</array>
 	<key>NoSyncConfirmBeta</key>
 	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
+	<true/>
+	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
+	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
 	<string>3ABAC866-58FC-4C53-B2F0-6F93D00D61B1</string>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -962,6 +968,10 @@
 	<false/>
 	<key>TmuxDashboardLimit</key>
 	<integer>10</integer>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
