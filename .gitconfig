@@ -1,0 +1,18 @@
+[user]
+name = zhihua
+email = cuizhihua@ethercap.com
+[core]
+editor = vim
+[merge]
+tool = vimdiff
+[alias]
+co = checkout
+ci = commit
+st = status
+br = branch
+oneline = log --pretty=oneline --since='2 days ago'
+onelog = log -p -1
+[color]
+status = auto
+branch = auto
+ui = auto
