@@ -2,7 +2,8 @@ set nocompatible
 filetype on
 syntax on
 set cursorline
-
+set nu
+set wrap
 map <F5> <Esc>:set nu<CR>
 map <F6> <Esc>:set nonu<CR>
 
