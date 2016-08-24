@@ -43,7 +43,7 @@ set paste
 set incsearch
 "设置不区分大小写的搜索，也可以使用后面加上\c在命令行配置
 "set ic
-"set ignorecase
+set ignorecase
 
 set history=50
 set ruler         " show the cursor position all the time
