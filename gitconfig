@@ -16,3 +16,5 @@ onelog = log -p -1
 status = auto
 branch = auto
 ui = auto
+[push]
+default = matching
