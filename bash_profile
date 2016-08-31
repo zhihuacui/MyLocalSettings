@@ -2,13 +2,12 @@
 export  CLICOLOR=1
 export LSCOLOR=Gxfxaxdxcxegedabagacad
 #export PS1='\[\e[31;1m\]\u:\[\e[0m\]\[\e[22;1m\]\w\$\[\e[0m\]'
-export PS1='\w>>>'
 #enables colorfor iTerm
 export TERM=xterm-color
 
-if [ -f ~/.bashrc ]; then
-   source ~/.bashrc
+if [ -d ~/.sh_bashrc ]; then
+   source ~/.sh_bashrc/*
 fi
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/sbin:$PATH"
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:.:$PATH"

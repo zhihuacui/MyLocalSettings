@@ -1,0 +1,112 @@
+"    Many of these default to 1 (On), so you would need to set
+"	 them to 0 to turn them off. E.g., in your .vimrc file:
+"      let php_special_vars = 0
+"     let php_special_functions = 0
+"      let php_alt_comparisons = 0
+"      etc.
+"    If the variables do not exist, the default value will be used.
+"
+"
+"    All options can be set globally or on a per-file basis by using
+"    global or buffer-local variables.  For example, you could turn on
+"    automatic folding for all PHP scripts in your .vimrc:
+let g:php_folding = 3
+set foldtext=MyFoldText()
+set fcs=vert:\|,fold:\ 
+function MyFoldText()
+    let line = " Fold "
+    let line .= " "
+    let line .= getline(v:foldstart)
+    let end = v:foldend - v:foldstart
+    let line .= "                   "
+    let line .= end
+    let sub = substitute(line, '/\*\|\*/\|{{{\d\=', '', 'g')
+    return v:folddashes.sub
+endfunction
+"
+"    Then you could turn it off in only one file using this command:
+"
+"      :let b:php_folding = 0 | setfiletype php
+"
+"
+"   -- PHP FEATURES --
+"
+let php_sql_query = 1
+"             ... for SQL syntax highlighting inside strings
+"
+let php_htmlInStrings = 1
+"             ... for HTML syntax highlighting inside strings
+"
+let php_baselib = 1
+"             ... for highlighting baselib functions
+"
+let php_special_vars = 1
+"             ... to highlight superglobals like $_GET, $_SERVER, etc.
+"               * always on if using php_oldStyle
+"
+let php_special_functions = 1
+"             ... to highlight functions with special behaviour
+"                 e.g., unset(), extract()
+"
+"         let php_alt_comparisons = 1/0  [default 1]
+"             ... to highlight comparison operators in an alternate colour
+"               * always on if using php_oldStyle
+"
+let php_alt_assignByReference = 1
+"             ... to highlight '=&' in '$foo =& $bar' in an alternate colour.
+"                 This also applies to a function which returns by-reference,
+"                 as well as a function argument which is by-reference.
+"
+"         let php_smart_members = 1/0  [default 0]
+"             ... syntax works out whether -> indicates a property or method.
+"                 Otherwise method colours may be used on properties, for
+let php_highlight_quotes = 1
+"             ... makes quote characters the same colour as the string
+"                 contents, like in C syntax.
+"
+let php_show_semicolon = 1
+"             ... to make the semicolon (;) more visible
+"
+let php_smart_semicolon = 1
+"             ... semicolon adopts the color of a 'return' or 'break' keyword
+"               * requires php_show_semicolon
+"                 Note: this also includes the ':' or ';' which follows a
+"                 'case' or 'default' inside a switch
+"
+let php_alt_blocks = 1
+"             ... colorize { and } around class/function/try/catch bodies
+"                 according to the type of code block.
+"               * requires php_strict_blocks
+"
+"         let php_alt_arrays = 0/1/2  [default 1]
+"             ... to colorize ( and ) around an array body, as well as '=>'
+"               * requires php_strict_blocks
+"                 Setting this to '2' will highlighting the commas as well.
+"                 Commas are not highlighted by default because it's too much
+"                 color.
+"
+"         let php_alt_construct_parents = 0/1  [default 0]
+"             ... to colorize the ( and ) around an if, while, foreach, or switch
+"                 body.
+"               * requires ... what?
+"                 TODO: work out dependencies, code them correctly
+"
+"         let php_show_spl = 1/0  [default 1]
+"             .. to colorize methods which are defined by PHP default interfaces
+"                TODO: work out what these interfaces are part of: SPL or just
+"                PHP
+"
+         let php_show_pcre = 1
+"                 (was: 'php_show_preg')
+"             ... to highlight regular expression patterns inside calls
+"                 to preg_match(), preg_replace(), etc.
+"
+"
+"   -- FINDING ERRORS --
+"
+"         let php_parent_error_close = 1/0  [default 1]
+"             ... for highlighting parent error ] or ) or }
+"               * requires php_strict_blocks
+"
+"         let php_parent_error_open = ?
+"             ... for skipping a php end tag, if there exists an

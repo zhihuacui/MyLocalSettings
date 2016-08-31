@@ -6,6 +6,8 @@
 	<true/>
 	<key>AllowClipboardAccess</key>
 	<false/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AnimateDimming</key>
 	<false/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -478,6 +480,8 @@
 	<key>HideScrollbar</key>
 	<false/>
 	<key>HideTab</key>
+	<false/>
+	<key>HideTabCloseButton</key>
 	<true/>
 	<key>HighlightTabLabels</key>
 	<true/>
@@ -556,12 +560,14 @@
 	<string>0 87 1280 556 0 0 1280 777 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 315 606 456 0 0 1280 777 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>654 318 400 129 0 0 1280 777 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>330 302 620 392 0 0 1280 777 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>209 320 918 381 0 0 1280 777 </string>
+	<string>209 319 770 382 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 66 1278 711 0 0 1280 777 </string>
+	<string>1 66 1278 711 0 0 1280 777 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>152 309 585 452 0 0 1280 777 </string>
 	<key>New Bookmarks</key>
@@ -1342,7 +1348,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>3ABAC866-58FC-4C53-B2F0-6F93D00D61B1</string>
 	<key>NoSyncLastTipTime</key>
-	<real>493603188.26524699</real>
+	<real>494215752.31928802</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1399,6 +1405,11 @@
 		<string>0038</string>
 		<string>0039</string>
 		<string>0040</string>
+		<string>0041</string>
+		<string>0042</string>
+		<string>0043</string>
+		<string>0044</string>
+		<string>0045</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
@@ -1468,11 +1479,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-08-22T00:39:49Z</date>
+	<date>2016-08-26T06:58:04Z</date>
 	<key>SavePasteHistory</key>
 	<true/>
 	<key>ShowBookmarkName</key>
-	<false/>
+	<true/>
+	<key>ShowFullScreenTabBar</key>
+	<true/>
+	<key>ShowNewOutputIndicator</key>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SmartPlacement</key>
@@ -1510,7 +1525,7 @@
 	<key>WebKitStandardFont</key>
 	<string>.Helvetica Neue DeskInterface</string>
 	<key>WindowNumber</key>
-	<true/>
+	<false/>
 	<key>WindowStyle</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
@@ -1520,6 +1535,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.5</string>
+	<string>3.0.7</string>
 </dict>
 </plist>
