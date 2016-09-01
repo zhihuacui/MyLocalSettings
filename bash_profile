@@ -11,3 +11,4 @@ fi
 export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 export PATH="$(brew --prefix homebrew/php/php56)/sbin:$PATH"
 export PATH="/usr/bin:/usr/local/bin:/usr/local/sbin:.:$PATH"
+

@@ -1,0 +1,38 @@
+# Add your local tmux config here
+# Status Bar
+set-option -g status-interval 1
+set-window-option -g window-status-current-fg magenta
+set-option -g status-fg default
+
+# Status Bar solarized-dark (default)
+set-option -g status-bg black
+set-option -g pane-active-border-fg black
+set-option -g pane-border-fg black
+
+# Status Bar solarized-light
+if-shell "[ \"$COLORFGBG\" = \"11;15\" ]" "set-option -g status-bg white"
+if-shell "[ \"$COLORFGBG\" = \"11;15\" ]" "set-option -g pane-active-border-fg white"
+if-shell "[ \"$COLORFGBG\" = \"11;15\" ]" "set-option -g pane-border-fg white"
+# 对齐方式
+set-option -g status-justify centre
+
+# 左下角
+set-option -g status-left '#[bg=black,fg=green][#[fg=cyan]#S#[fg=green]]'
+set-option -g status-left-length 20
+
+# 窗口列表
+set -g renumber-windows on
+setw -g automatic-rename on
+set-window-option -g window-status-format '#[bg=black,fg=green][#[dim]#I#[fg=blue]:#[fg=cyan]#W#[fg=grey,dim]#[bg=black,fg=green]]'
+set-window-option -g window-status-current-format '#[bg=black,fg=green][#[dim]⭐️:#I#[fg=blue]:#[fg=cyan]#W⭐️ #[fg=grey,dim]#[bg=black,fg=green]]'
+
+# set terminal title
+set -g set-titles on
+set -g set-titles-string '[#S] ❐#h ● #W'
+
+# 右下角
+set -g status-right '#[fg=green][#[fg=cyan]%Y-%m-%d#[fg=green]]'
+
+# 24 hour clock
+setw -g clock-mode-style 24
+
